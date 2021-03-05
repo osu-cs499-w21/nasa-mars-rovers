@@ -1,0 +1,22 @@
+[
+  {"id": 1, "title": "Swedish Fish", "price": 0.01, "inventory": 2500, "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/4/40/Swedish_fish.png"},
+  {"id": 2, "title": "Cry Baby", "price": 0.05, "inventory": 450, "photoUrl": "https://images-na.ssl-images-amazon.com/images/I/71o9uGhhmCL._SL1000_.jpg"},
+  {"id": 3, "title": "Atomic Fireball", "price": 0.05, "inventory": 280, "photoUrl": "https://cdn.shopify.com/s/files/1/0004/8132/9204/products/atomic_fireballs_bulk_7_1024x1024.jpg"},
+  {"id": 4, "title": "Root Beer Barrel", "price": 0.05, "inventory": 200, "photoUrl": "https://nuts.com/images/rackcdn/ed910ae2d60f0d25bcb8-80550f96b5feb12604f4f720bfefb46d.ssl.cf1.rackcdn.com/f6ae7d27ce0d652d.cro-OLlV7MKo-zoom.jpg"},
+  {"id": 5, "title": "Tootsie Roll (small)", "price": 0.01, "inventory": 1250, "photoUrl": "https://cdn.shopify.com/s/files/1/0972/7116/products/all-city-candy-tootsie-roll-midgees-bank-4-oz-novelty-tootsie-roll-industries-350643_600x.jpg"},
+  {"id": 6, "title": "Sour Patch Kids", "price": 0.01, "inventory": 2200, "photoUrl": "https://smhttp-ssl-60529-live.nexcesscdn.net/pub/media/catalog/product/cache/4226787a49a240193bc173af0a49120d/s/o/sour_patch_kids_bulk_new.jpg"},
+  {"id": 7, "title": "Pixy Stix", "price": 0.05, "inventory": 600, "photoUrl": "http://cdn.shopify.com/s/files/1/0004/8132/9204/products/pixy_stix_bulk_2_1024x1024.jpg?v=1522355949"},
+  {"id": 8, "title": "Jolly Rancher (large)", "price": 0.25, "inventory": 840, "photoUrl": "https://www.candywarehouse.com/item-images/125951-01_cherry-jolly-rancher-candy-sticks-36-piece-box.jpg"},
+  {"id": 9, "title": "Jolly Rancher (small)", "price": 0.05, "inventory": 2730, "photoUrl": "https://www.pearlscandynh.com/prodimages/jollyrancherassorted1b.jpg"},
+  {"id": 10, "title": "Dum Dums Pop", "price": 0.10, "inventory": 1370, "photoUrl": "https://smhttp-ssl-60529-live.nexcesscdn.net/pub/media/catalog/product/cache/4226787a49a240193bc173af0a49120d/d/u/dum-dum-lollipops-bulk.jpg"},
+  {"id": 11, "title": "Smarties", "price": 0.05, "inventory": 790, "photoUrl": "https://cdn.shopify.com/s/files/1/0972/7116/products/all-city-candy-smarties-15-tablet-candy-rolls-3-lb-bulk-bag-bulk-wrapped-smarties-candy-company-134815_600x.jpg"},
+  {"id": 12, "title": "Jawbreaker", "price": 0.05, "inventory": 360, "photoUrl": "https://cdn11.bigcommerce.com/s-1b75a/images/stencil/1280x1280/products/264/327/jawbreakerBizarreBruiser__51836.1311709718.jpg"},
+  {"id": 13, "title": "Tootsie Pop", "price": 0.25, "inventory": 255, "photoUrl": "https://nuts.com/images/rackcdn/ed910ae2d60f0d25bcb8-80550f96b5feb12604f4f720bfefb46d.ssl.cf1.rackcdn.com/933160bcc0b0a830-GAbGVCfW-large.jpg"},
+  {"id": 14, "title": "Blow Pop", "price": 0.25, "inventory": 240, "photoUrl": "https://cdn.shopify.com/s/files/1/0972/7116/products/assortedblowpops_c8492a61-e4d6-443c-b37c-630ae03073d7_600x.jpg?v=1596745386"},
+  {"id": 15, "title": "Dubble Bubble", "price": 0.05, "inventory": 745, "photoUrl": "https://www.mastgeneralstore.com/prodimages/4399-DEFAULT-l.jpg"},
+  {"id": 16, "title": "Sixlets", "price": 0.10, "inventory": 430, "photoUrl": "https://cdn11.bigcommerce.com/s-b1f60/images/stencil/1280x1280/products/506/1461/sixlets__29073.1422036161.jpg"},
+  {"id": 17, "title": "Chick-O-Stick", "price": 0.10, "inventory": 380, "photoUrl": "https://cdn.shopify.com/s/files/1/0004/8132/9204/products/chick-o-stick-king-size3_575x430_crop_center@2x.jpg"},
+  {"id": 18, "title": "Bazooka Gum", "price": 0.05, "inventory": 720, "photoUrl": "https://cdn.shopify.com/s/files/1/0004/8132/9204/products/bazooka-bubble-gum2_653cba0b-928c-4e85-8a33-3b2ec4c05be1_large.jpg"},
+  {"id": 19, "title": "WarHeads", "price": 0.05, "inventory": 625, "photoUrl": "https://www.professionalvendingsupply.com/assets/images/product%20images/candy/wrapped%20candy/warheads.jpg"},
+  {"id": 20, "title": "Everlasting Gobstopper", "price": 0.05, "inventory": 260, "photoUrl": "https://www.shopthebulkstore.com/pub/media/catalog/product/cache/a217a25e9089c8a69334ee6aa99b65f6/w/o/wonka_everlasting_gobstopper_2.jpg"}
+]

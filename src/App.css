@@ -1,38 +1,91 @@
-.App {
+body {
+  background-color: #e77d10;
+  background-image: url('./images/background.jpg');
+  overflow: hidden;
+  font-family: Garamond;
+  color: #d9d9d9;
+}
+
+
+/* for navigation panel */
+.nav_class ul {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.nav_list {
+  list-style-type: none;
+  overflow: hidden;
+  padding: 0;
+  margin: 0;
+  opacity: 0.9;
+  background-color: rgba(255,255,255, 0.15);
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+#nav_item {
+  float: left;
   text-align: center;
+  vertical-align: middle;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+#nav_item:nth-child(1) {
+  margin-right: -80px;
+  float: left;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+#nav_item:nth-child(2), #nav_item:nth-child(2), #nav_item:nth-child(3), #nav_item:nth-child(4), #nav_item:nth-child(5), #nav_item:nth-child(1) {
+   cursor: pointer;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+#nav_item:nth-child(2), #nav_item:nth-child(2), #nav_item:nth-child(3), #nav_item:nth-child(4), #nav_item:nth-child(5), #nav_item:last-child {
+ margin-top: 20px;
+}
+
+#nav_item:nth-child(3) {
+  margin-right: -50px;
+}
+
+#nav_item:nth-child(4) {
+  margin-right: -50px;
+  margin-left: -30px;
+}
+
+#nav_item:nth-child(5) {
+  margin-left: -30px;
+}
+
+#nav_item:last-child {
+  float: right;
+  margin-right: 80px;
+  cursor: default;
+}
+
+#nav_item a {
+  display: block;
   color: white;
+  font-size: 28px;
+  text-decoration: none;
+  padding: 10px 80px;
 }
 
-.App-link {
-  color: #61dafb;
+#nav_item a:hover, .active {
+  /*background-color: rgba(255,255,255, 0.4);*/
+  color: black;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+#mars_img {
+  width: 75px;
+  height: 75px;
+}
+
+
+/* main page */
+.title {
+  margin-top: 200px;
+  font-size: 100px;
+  text-align: center;
 }

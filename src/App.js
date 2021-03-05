@@ -1,24 +1,40 @@
-import logo from './logo.svg';
+import React from 'react';
 import './App.css';
 
+import {
+  BrowserRouter as Router,
+  Route,
+  Switch,
+  Link,
+  Redirect,
+  useParams,
+  useRouteMatch
+} from "react-router-dom";
+
+/* Components */
+import Main from "./components/main";
+import Rover1 from "./components/rover1";
+import Rover2 from "./components/rover2";
+import Rover3 from "./components/rover3";
+import Search from "./components/search";
+import ErrorPage from "./components/404";
+
+
+/* where all the links/paths are */
 function App() {
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <Switch>
+        <Route exact path="/" component={Main} />
+        <Route path="/rover1" component={Rover1} />
+        <Route path="/rover2" component={Rover2} />
+        <Route path="/rover3" component={Rover3} />
+        <Route path="/search" component={Search} />
+        <Route exact path="/404" component={ErrorPage} />
+        <Route path="*"><Redirect to="/404" /></Route>
+      </Switch>
+    </Router>
   );
 }
 
