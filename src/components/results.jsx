@@ -8,7 +8,8 @@ import ErrorContainer from './components/ErrorContainer';
 export default function Results() {
     const API_KEY = "Nq0SfwbF2davR5zNYTBYenTMiaENV9tCdFicvjVb";
     const months = ["January","February","March","April","May","June","July","August","September","October","November","December"];
-    const parts = window.location.search.split('=')[1].split(',');
+    const searchQuery = window.location.search.split('=')[1];
+    const parts = searchQuery.split(',');
     const newDate = new Date();
     const dateParts = parts[1].split('-');
     newDate.setFullYear(dateParts[0],dateParts[1],dateParts[2]);
@@ -54,14 +55,14 @@ export default function Results() {
                 setLoading(false);
             }
         }
-        if(parts){
+        if(searchQuery){
             fetchPhotos();
         }
         return() =>{
             controller.abort();
             ignore = true;
         }
-    }, [ parts ]);
+    }, [ searchQuery ]);
 
 
     return (
@@ -75,7 +76,7 @@ export default function Results() {
                 ) : (
                     <div style={{display: "inline-flex", width:"100%", flexWrap:"wrap"}}>
                         {photos.map(photo =>(
-                            <img src={photo.img_src} className="rover-image" alt=""></img>
+                            <img src={photo.img_src} className="rover-image" alt="" key={photo.id}></img>
                         ))}
                     </div>
                 )}

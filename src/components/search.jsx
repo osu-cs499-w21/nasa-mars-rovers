@@ -34,6 +34,17 @@ const Search = () => {
         camOptions.add(option);
       }
     }
+    switch(rover){
+      case "opportunity":
+        console.log("changing maxDay");
+        maxDay = "2018-07-07";
+        document.getElementById("findDate").max = maxDay;
+      case "spirit":
+        console.log("changing maxDay");
+        maxDay="2010-03-21";
+        document.getElementById("findDate").max = maxDay;
+      default:
+    }
   }
 
   function roverSearch(e) {

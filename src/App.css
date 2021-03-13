@@ -1,7 +1,9 @@
 body {
   background-color: #e77d10;
   background-image: url('./images/background.jpg');
-  overflow: hidden;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  overflow: visible;
   font-family: Garamond;
   color: #d9d9d9;
 }
