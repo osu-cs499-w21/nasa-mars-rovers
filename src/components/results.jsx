@@ -1,5 +1,6 @@
 import React, {useState, useEffect} from 'react';
 import Nav from "./nav";
+import fetch from 'isomorphic-unfetch';
 
 import Spinner from './components/Spinner';
 import ErrorContainer from './components/ErrorContainer';
@@ -7,9 +8,9 @@ import ErrorContainer from './components/ErrorContainer';
 export default function Results() {
     const API_KEY = "Nq0SfwbF2davR5zNYTBYenTMiaENV9tCdFicvjVb";
     const months = ["January","February","March","April","May","June","July","August","September","October","November","December"];
-    var parts = window.location.search.split('=')[1].split(',');
-    var newDate = new Date();
-    var dateParts = parts[1].split('-');
+    const parts = window.location.search.split('=')[1].split(',');
+    const newDate = new Date();
+    const dateParts = parts[1].split('-');
     newDate.setFullYear(dateParts[0],dateParts[1],dateParts[2]);
     const [photos, setPhotos] = useState([]);
     const [isLoading, setLoading] = useState(false);
@@ -23,23 +24,28 @@ export default function Results() {
             setError(false);
             let responseBody = {};
             try{
-                if(parts[2] !== "all"){
+                if(parts[2] !== "all"){ //get all cameras
                     const res = await fetch(
-                        `https://api.nasa.gov/mars-photos/api/v1/rovers/${parts[0]}/photos?earth_date=${parts[1]}&camera=${parts[2]}&api_key=${API_KEY}`  //
+                        `https://api.nasa.gov/mars-photos/api/v1/rovers/${parts[0]}/photos?earth_date=${parts[1]}&camera=${parts[2]}&api_key=${API_KEY}`,
+                        {signal:controller.signal}
                     )
                     responseBody = await res.json();
-                } else {
+                } else { //get a specific camera
                     const res = await fetch(
-                        `https://api.nasa.gov/mars-photos/api/v1/rovers/${parts[0]}/photos?earth_date=${parts[1]}&api_key=${API_KEY}`  //
+                        `https://api.nasa.gov/mars-photos/api/v1/rovers/${parts[0]}/photos?earth_date=${parts[1]}&api_key=${API_KEY}`,
+                        {signal:controller.signal}
                     )
                     responseBody = await res.json();
                 }
             } catch(e) {
                 if(e instanceof DOMException) {
+                    setError(true);
+                    setLoading(false);
                     console.log("Request Aborted");
                     console.log(e)
                 } else {
                     setError(true);
+                    setLoading(false);
                     console.log(e);
                 }
             }

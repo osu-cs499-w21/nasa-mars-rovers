@@ -19,7 +19,7 @@
     width: 12px;
     height: 12px;
     margin: 6px; /* (width / 2) or (height / 2) */
-    background-color: #333;
+    background-color: #cfc4c4;
     animation: bounce-delay infinite 1.4s ease-in-out both;
 }
 
