@@ -12,10 +12,12 @@ const Search = () => {
   if(dd<10){
     dd = '0'+dd;
   }
+  mm = parseInt(mm) + 1;
   if(mm<10){
     mm = '0'+mm;
   }
-  var maxDay = yyyy + '-' + mm + '-' + dd;
+  
+  var maxDay = yyyy + '-' + (mm) + '-' + dd;
 
   function updateCameras(){
     var rover = document.getElementById("rovers").value;
@@ -60,10 +62,11 @@ const Search = () => {
           <br/>
           <label>Select a camera: </label>
           <select id="cameraSelection">
+            <option>---</option>
           </select>
           <br/>
           <br/>
-          <input type="submit" onClick={roverSearch}></input>
+          <button type="submit" onClick={roverSearch}>Search</button>
         </form>
       </div>
     </div>

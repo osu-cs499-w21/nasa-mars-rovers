@@ -101,3 +101,10 @@ input {
 label {
   font-size: 48px;
 }
+
+.rover-image {
+  width: 200px;
+  max-height: auto;
+  padding-left: 10px;
+  padding-top: 10px;
+}
