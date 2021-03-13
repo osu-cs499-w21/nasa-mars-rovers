@@ -18,6 +18,7 @@ import Rover2 from "./components/rover2";
 import Rover3 from "./components/rover3";
 import Search from "./components/search";
 import ErrorPage from "./components/404";
+import Results from "./components/results";
 
 
 /* where all the links/paths are */
@@ -31,6 +32,7 @@ function App() {
         <Route path="/rover2" component={Rover2} />
         <Route path="/rover3" component={Rover3} />
         <Route path="/search" component={Search} />
+        <Route path="/results" component={Results} />
         <Route exact path="/404" component={ErrorPage} />
         <Route path="*"><Redirect to="/404" /></Route>
       </Switch>

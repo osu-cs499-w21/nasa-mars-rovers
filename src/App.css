@@ -89,3 +89,15 @@ body {
   font-size: 100px;
   text-align: center;
 }
+
+select {
+  font-size: 18px;
+}
+
+input {
+  font-size: 18px;
+}
+
+label {
+  font-size: 48px;
+}
