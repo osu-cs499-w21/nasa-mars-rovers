@@ -8,22 +8,107 @@ body {
   color: #d9d9d9;
 }
 
+/* rover pages*/
+.whole-card-holder{
+  display: flex;
+  margin-top: 20px;
+}
+
+.rover-card{
+  max-width: 100%;
+  outline: solid;
+  outline-color: black;
+  outline-width: 1px;
+}
+
+.card-holder{
+  margin-right: 15px;
+  width: 50%;
+  margin-left: 1px;
+}
+
+.row-type-a{
+  background-color: grey;
+  padding: 0;
+  margin: 0;
+  opacity: .9;
+}
+
+.row-type-b{
+  background-color: darkgrey;
+  padding: 0;
+  margin: 0;
+  opacity: .9;
+}
+
+.card-table td{
+  border: solid;
+  border-color: black;
+  border-width: 1px;
+  text-align: center;
+  font-size: 25px;
+}
+
+.card-table{
+  border: solid;
+  border-color: black;
+  border-width: 1px;
+  width: 100%;
+  height: 100%;
+}
+
+.card-table-holder{
+  height: auto;
+  width: 50%;
+  margin-right: 1px;
+  margin-bottom: 5px;
+}
+.rover-description{
+  font-size: 25px;
+  -webkit-text-stroke-width: 0.2px;
+  -webkit-text-stroke-color: black;
+}
+
+.description-holder{
+  margin-bottom: 30px;
+  text-align: center;
+  margin-top: 30px;
+}
+
+.name-holder{
+  text-align: center;
+}
+.rover-name{
+  text-align: center;
+  font-size: 60px;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: black;
+}
+.rover-page{
+  margin-top: 150px; 
+  margin-left: 15px; 
+  margin-right: 15px;
+  overflow: scroll;
+}
 
 /* for navigation panel */
+
 .nav_class ul {
   display: inline-block;
   vertical-align: middle;
 }
 
 .nav_list {
+  z-index: 1;
   list-style-type: none;
   overflow: hidden;
   padding: 0;
   margin: 0;
-  opacity: 0.9;
-  background-color: rgba(255,255,255, 0.15);
+  /*opacity: 0.9;*/
+  background-color: grey;
+  /*background-color: rgba(255,255,255, 0.15);*/
   width: 100%;
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
 }

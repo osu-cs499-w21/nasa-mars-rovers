@@ -1,7 +1,5 @@
 import React from 'react';
 import Nav from "./nav";
-import mars from '../images/mars2.png'; /* or mars1 */
-
 
 /* the main page with welcome sign */
 const Main = () => {

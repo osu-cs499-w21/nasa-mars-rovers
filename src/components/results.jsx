@@ -6,7 +6,6 @@ import Spinner from './components/Spinner';
 import ErrorContainer from './components/ErrorContainer';
 
 export default function Results() {
-    const API_KEY = "Nq0SfwbF2davR5zNYTBYenTMiaENV9tCdFicvjVb";
     const months = ["January","February","March","April","May","June","July","August","September","October","November","December"];
     const searchQuery = window.location.search.split('=')[1];
     const parts = searchQuery.split(',');
@@ -27,13 +26,13 @@ export default function Results() {
             try{
                 if(parts[2] !== "all"){ //get all cameras
                     const res = await fetch(
-                        `https://api.nasa.gov/mars-photos/api/v1/rovers/${parts[0]}/photos?earth_date=${parts[1]}&camera=${parts[2]}&api_key=${API_KEY}`,
+                        `https://api.nasa.gov/mars-photos/api/v1/rovers/${parts[0]}/photos?earth_date=${parts[1]}&camera=${parts[2]}&api_key=${process.env.REACT_APP_ROVER_KEY}`,
                         {signal:controller.signal}
                     )
                     responseBody = await res.json();
                 } else { //get a specific camera
                     const res = await fetch(
-                        `https://api.nasa.gov/mars-photos/api/v1/rovers/${parts[0]}/photos?earth_date=${parts[1]}&api_key=${API_KEY}`,
+                        `https://api.nasa.gov/mars-photos/api/v1/rovers/${parts[0]}/photos?earth_date=${parts[1]}&api_key=${process.env.REACT_APP_ROVER_KEY}`,
                         {signal:controller.signal}
                     )
                     responseBody = await res.json();

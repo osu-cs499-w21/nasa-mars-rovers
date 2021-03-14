@@ -39,10 +39,12 @@ const Search = () => {
         console.log("changing maxDay");
         maxDay = "2018-07-07";
         document.getElementById("findDate").max = maxDay;
+        break;
       case "spirit":
         console.log("changing maxDay");
         maxDay="2010-03-21";
         document.getElementById("findDate").max = maxDay;
+        break;
       default:
     }
   }
@@ -58,7 +60,7 @@ const Search = () => {
   return (
     <div>
       <Nav/>
-      <div style={{marginTop:"150px"}}>
+      <div style={{marginTop:"150px", zIndex: "0"}}>
         <form>
           <label>Select a Rover: </label>
           <select id="rovers" onChange={updateCameras} defaultValue="--">

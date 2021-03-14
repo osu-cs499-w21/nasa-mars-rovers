@@ -5,10 +5,7 @@ import {
   BrowserRouter as Router,
   Route,
   Switch,
-  Link,
   Redirect,
-  useParams,
-  useRouteMatch
 } from "react-router-dom";
 
 /* Components */
