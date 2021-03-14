@@ -11,9 +11,8 @@ const Nav = () => {
         <li id="nav_item"><a href="/"><img id="mars_img" src={mars} alt = "Home"/></a></li>
         <li id="nav_item"><a href="/search">Search</a></li>
         <li id="nav_item"><a href="/rover1">Curiosity</a></li>
-        <li id="nav_item"><a href="/rover2">Oppurtunity</a></li>
+        <li id="nav_item"><a href="/rover2">Opportunity</a></li>
         <li id="nav_item"><a href="/rover3">Spirit</a></li>
-        <li id="nav_item"><a href="/">Earth Date</a></li>
       </ul>
     </div>
   );

@@ -15,7 +15,7 @@ const Rover1 = () => {
   if(mm<10){
     mm = '0'+mm;
   }
-  
+
   var maxDay = yyyy + '-' + (mm) + '-' + dd;
 
   function switchDate(){
@@ -26,10 +26,10 @@ const Rover1 = () => {
     <div>
       <Nav/>
       <div class = "rover-page">
-       
+
         <div class = "name-holder"><text class = "rover-name">Curiosity</text></div>
-        <div class = "description-holder"><text class = "rover-description">Curiosity is the third rover sent to Mars, launching on November 26, 2011 and landing nine months later on August 5, 2012. The Curiosity rover has six wheels and eight cameras, containing a functional arm that can reach up to seven feet! Curiosity is built using a hardened body to protect itself from the harsh environment on Mars. The rover is still functioning today, sending and recieving informtation from NASA every day.</text></div>
-        
+        <div class = "description-holder"><text class = "rover-description">Curiosity is the third rover sent to Mars, launching on November 26, 2011 and landing nine months later on August 5, 2012. The Curiosity rover has six wheels and eight cameras, containing a functional arm that can reach up to seven feet. Curiosity is built using a hardened body to protect itself from the harsh environment on Mars. The rover is still functioning today, sending and recieving informtation from NASA every day.</text></div>
+
         <div class = "name-holder"><text class = "rover-name">About</text></div>
         <div class = "whole-card-holder">
           <div class = "card-holder"><img class = "rover-card" src = "https://mars.nasa.gov/system/feature_items/images/6037_msl_banner.jpg" alt = "curiosity"/></div>
