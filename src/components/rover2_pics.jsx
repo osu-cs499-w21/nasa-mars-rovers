@@ -27,11 +27,13 @@ class Opport_Img extends Component {
       return <p>{photo[key].img_src}</p>
     })} - I'm getting "this.state.latest_photos.map is not a function"*/
 
-
+  /* nothing displays here */
   render() {
     return (
       <div>
-        <p>Testing</p>
+        {Object.keys(this.state.latest_photos).map(key => {
+          return <p>{this.state.latest_photos.[key].img_src}</p>
+        })}
       </div>
     );
   }
