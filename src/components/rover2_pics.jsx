@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 
+const API_KEY = process.env.REACT_APP_ROVER_KEY;
 
 class OpportunityImg extends Component {
   constructor() {
@@ -10,7 +11,7 @@ class OpportunityImg extends Component {
   }
 
   componentDidMount() {
-    fetch('https://api.nasa.gov/mars-photos/api/v1/rovers/opportunity/latest_photos?api_key=Nq0SfwbF2davR5zNYTBYenTMiaENV9tCdFicvjVb')
+    fetch(`https://api.nasa.gov/mars-photos/api/v1/rovers/opportunity/latest_photos?api_key=${API_KEY}`)
     .then((response) => response.json())
        .then((allData) => {
           console.log(allData);
@@ -21,6 +22,7 @@ class OpportunityImg extends Component {
            for(var i = 0; i< allData.latest_photos.length; i++)
               console.log(allData.latest_photos[i].img_src);
        })
+       console.log("API is", API_KEY);
   }
 
   /* I'm trying to actually access the img url from data like above via console.log */

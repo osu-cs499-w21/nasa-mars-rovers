@@ -8,7 +8,8 @@ const Main = () => {
     <div className="main_div">
       <Nav/>
       <div>
-        <h1 className="title">Hello World</h1>
+        <h1 className="title">Mars Rover Photos</h1>
+        <p className="descr">Look at the photos gathered by NASA's Curiosity, Opportunity, and Spirit rovers on Mars!</p>
       </div>
 
     </div>

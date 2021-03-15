@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 
+const API_KEY = process.env.REACT_APP_ROVER_KEY;
 
 class SpiritImg extends Component {
   constructor() {
@@ -10,7 +11,7 @@ class SpiritImg extends Component {
   }
 
   componentDidMount() {
-    fetch('https://api.nasa.gov/mars-photos/api/v1/rovers/spirit/latest_photos?api_key=Nq0SfwbF2davR5zNYTBYenTMiaENV9tCdFicvjVb')
+    fetch(`https://api.nasa.gov/mars-photos/api/v1/rovers/spirit/latest_photos?api_key=${API_KEY}`)
     .then((response) => response.json())
        .then((allData) => {
           console.log(allData);

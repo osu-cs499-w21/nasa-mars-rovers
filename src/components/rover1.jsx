@@ -5,7 +5,7 @@ import CuriosityImg from "./rover1_pics";
 
 const Rover1 = () => {
 
-  
+
 
   return (
     <div>
@@ -50,7 +50,7 @@ const Rover1 = () => {
             </table></div>
         </div>
 
-        <div class = "name-holder"><text class = "rover-name">Cameras</text></div>
+        <div class = "name-holder"><text class = "rover-name">Recent Photos</text></div>
         <CuriosityImg/>
     </div>
     </div>
