@@ -32,7 +32,7 @@ export default function Results() {
                     responseBody = await res.json();
                 } else { //get all cameras
                     const res = await fetch(
-                        `https://api.nasa.gov/mars-photos/api/v1/rovers/${parts[0]}/photos?earth_date=${parts[1]}&api_key=${process.env.APP_REACT_ROVER_KEY}`,
+                        `https://api.nasa.gov/mars-photos/api/v1/rovers/${parts[0]}/photos?earth_date=${parts[1]}&api_key=${process.env.REACT_APP_ROVER_KEY}`,
                         {signal:controller.signal}
                     )
                     responseBody = await res.json();
