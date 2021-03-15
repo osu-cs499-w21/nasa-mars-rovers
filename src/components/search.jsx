@@ -60,7 +60,7 @@ const Search = () => {
   return (
     <div>
       <Nav/>
-      <div style={{marginTop:"150px", zIndex: "0"}}>
+      <div id="searchDiv">
         <form>
           <label>Select a Rover: </label>
           <select id="rovers" onChange={updateCameras} defaultValue="--">
@@ -79,7 +79,7 @@ const Search = () => {
           </select>
           <br/>
           <br/>
-          <button type="submit" onClick={roverSearch}>Search</button>
+          <button type="submit" onClick={roverSearch} id="searchBtn">Search</button>
         </form>
       </div>
     </div>

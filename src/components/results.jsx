@@ -24,15 +24,15 @@ export default function Results() {
             setError(false);
             let responseBody = {};
             try{
-                if(parts[2] !== "all"){ //get all cameras
+                if(parts[2] !== "all"){ //get a specific camera
                     const res = await fetch(
-                        `https://api.nasa.gov/mars-photos/api/v1/rovers/${parts[0]}/photos?earth_date=${parts[1]}&camera=${parts[2]}&api_key=${process.env.REACT_APP_ROVER_KEY}`,
+                        `https://api.nasa.gov/mars-photos/api/v1/rovers/${parts[0]}/photos?earth_date=${parts[1]}&camera=${parts[2]}&api_key=${process.env.APP_REACT_ROVER_KEY}`,
                         {signal:controller.signal}
                     )
                     responseBody = await res.json();
-                } else { //get a specific camera
+                } else { //get all cameras
                     const res = await fetch(
-                        `https://api.nasa.gov/mars-photos/api/v1/rovers/${parts[0]}/photos?earth_date=${parts[1]}&api_key=${process.env.REACT_APP_ROVER_KEY}`,
+                        `https://api.nasa.gov/mars-photos/api/v1/rovers/${parts[0]}/photos?earth_date=${parts[1]}&api_key=${process.env.APP_REACT_ROVER_KEY}`,
                         {signal:controller.signal}
                     )
                     responseBody = await res.json();
@@ -75,7 +75,7 @@ export default function Results() {
                 ) : (
                     <div style={{display: "inline-flex", width:"100%", flexWrap:"wrap"}}>
                         {photos.map(photo =>(
-                            <img src={photo.img_src} className="rover-image" alt="" key={photo.id}></img>
+                            <a href={photo.img_src}><img src={photo.img_src} className="rover-image" alt="" key={photo.id}></img></a>
                         ))}
                     </div>
                 )}

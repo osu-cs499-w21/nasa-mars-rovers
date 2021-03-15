@@ -206,3 +206,14 @@ label {
   padding-left: 10px;
   padding-top: 10px;
 }
+
+#searchDiv {
+  padding-left: 30%;
+  margin-top: 150px;
+  z-index: 0;
+}
+
+#searchBtn {
+  margin-left: 20%;
+  font-size: 24px;
+}
