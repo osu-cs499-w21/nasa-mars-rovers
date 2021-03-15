@@ -13,6 +13,12 @@ body {
 }
 
 /* rover pages*/
+.recent-pics{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
 .whole-card-holder{
   display: flex;
   margin-top: 20px;
@@ -96,11 +102,6 @@ body {
   overflow: scroll;
 }
 
-#spirit_img {
-  height: 360px;
-  width: 555px;
-  margin-left: 95px;
-}
 
 /* for navigation panel */
 
@@ -149,7 +150,7 @@ body {
 }
 
 #nav_item:nth-child(3) {
-  margin-left: 170px;
+  margin-left: 50px;
 }
 
 #nav_item:nth-child(4) {

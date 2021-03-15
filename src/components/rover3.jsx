@@ -1,5 +1,6 @@
 import React from 'react';
 import Nav from "./nav";
+import SpiritImg from "./rover3_pics"
 
 const Rover3 = () => {
 
@@ -51,6 +52,7 @@ const Rover3 = () => {
             </table></div>
         </div>
         <div class = "name-holder"><text class = "rover-name">Recent Photos</text></div>
+        <SpiritImg/>
       </div>
     </div>
   );
