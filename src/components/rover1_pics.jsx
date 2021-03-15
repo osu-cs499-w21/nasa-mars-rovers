@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
 
-class OpportunityImg extends Component {
+class CuriosityImg extends Component {
   constructor() {
     super();
     this.state = {
@@ -10,7 +10,7 @@ class OpportunityImg extends Component {
   }
 
   componentDidMount() {
-    fetch('https://api.nasa.gov/mars-photos/api/v1/rovers/opportunity/latest_photos?api_key=Nq0SfwbF2davR5zNYTBYenTMiaENV9tCdFicvjVb')
+    fetch('https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/latest_photos?api_key=Nq0SfwbF2davR5zNYTBYenTMiaENV9tCdFicvjVb')
     .then((response) => response.json())
        .then((allData) => {
           console.log(allData);
@@ -47,4 +47,5 @@ class OpportunityImg extends Component {
 }
 
 
-export default OpportunityImg;
+export default CuriosityImg;
+

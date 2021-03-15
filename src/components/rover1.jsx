@@ -1,26 +1,11 @@
 import React from 'react';
 import Nav from "./nav";
+import CuriosityImg from "./rover1_pics";
 //import {useHistory} from 'react-router-dom';
 
 const Rover1 = () => {
-  //const history = useHistory();
-  var today = new Date();
-  var dd = today.getDate();
-  var mm = today.getMonth();
-  var yyyy = today.getFullYear();
-  if(dd<10){
-    dd = '0'+dd;
-  }
-  mm = parseInt(mm) + 1;
-  if(mm<10){
-    mm = '0'+mm;
-  }
 
-  var maxDay = yyyy + '-' + (mm) + '-' + dd;
-
-  function switchDate(){
-
-  }
+  
 
   return (
     <div>
@@ -66,17 +51,8 @@ const Rover1 = () => {
         </div>
 
         <div class = "name-holder"><text class = "rover-name">Cameras</text></div>
-        <div class = "images-container">
-        <form>
-          <label>Select a Date: </label>
-          <input type="date" id="findDate" max={maxDay} value = {maxDay} onChange = {switchDate()}></input>
-          <br/>
-          {/* <button type="submit" onClick={roverSearch}>Search</button> */}
-        </form>
-        </div>
-
-      </div>
-
+        <CuriosityImg/>
+    </div>
     </div>
   );
 

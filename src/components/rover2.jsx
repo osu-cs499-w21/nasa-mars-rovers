@@ -1,6 +1,6 @@
 import React from 'react';
 import Nav from "./nav";
-import Opport_Img from "./rover2_pics";
+import OpportunityImg from "./rover2_pics";
 
 
 const Rover2 = () => {
@@ -51,7 +51,7 @@ const Rover2 = () => {
             </table></div>
         </div>
         <div class = "name-holder"><text class = "rover-name">Recent Photos</text></div>
-        <Opport_Img/>
+        <OpportunityImg/>
     </div>
     </div>
   );
