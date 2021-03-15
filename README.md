@@ -1,70 +1,41 @@
-# Getting Started with Create React App
+# Mars Rover Photos Project
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+The project introduces the user to the three of NASA's rovers and shows the photos taken by them. The search allows the user to filter the photo results by the Earth's date and camera type. 
 
-## Available Scripts
+## API Key
 
-In the project directory, you can run:
+The API is designed to collect image data gathered by NASA's Curiosity, Opportunity, and Spirit rovers on Mars and make it more easily available to other developers, educators, and citizen scientists.
 
-### `npm start`
+## Rover photos
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Each rover has its own set of photos stored in the database, which can be queried separately. There are several possible queries that can be made against the API. Photos are organized by the Earth date on which they were taken.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+Along with querying by date, results can also be filtered by the camera with which it was taken. Each camera has a unique function and perspective, and they are named as follows:
 
-### `npm test`
+### Rover Cameras
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+    Abbreviation | Camera                         | Curiosity | Opportunity | Spirit
+     ------------ | ------------------------------ | --------  | ----------- | ------ |
+    FHAZ|Front Hazard Avoidance Camera|✔|✔|✔|
+    RHAZ|Rear Hazard Avoidance Camera|✔|✔|✔|
+    MAST|Mast Camera| ✔||
+    CHEMCAM|Chemistry and Camera Complex  |✔||
+    MAHLI|Mars Hand Lens Imager|✔||
+    MARDI|Mars Descent Imager|✔||
+    NAVCAM|Navigation Camera|✔|✔|✔|
+    PANCAM|Panoramic Camera| |✔|✔|
+    MINITES|Miniature Thermal Emission Spectrometer (Mini-TES)| |✔|✔|
 
-### `npm run build`
+#### Querying by Earth date:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+    Dates should be formatted as 'yyyy-mm-dd'. The earliest date available is the date of landing for each rover.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+    https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?api_key=DEMO_KEY&earth_date=2015-6-3
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+#### Filtering Queries by Camera:
 
-### `npm run eject`
+    The camera parameter is not case sensitive, but must be one of the camera abbreviations listed in the table above for the respective rover.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+    https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?api_key=DEMO_KEY&sol=1000&camera=fhaz
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+    https://api.nasa.gov/mars-photos/api/v1/rovers/opportunity/photos?api_key=DEMO_KEY&earth_date=2015-6-3&camera=pancam
